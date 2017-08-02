@@ -2,11 +2,11 @@ CC=gcc
 CFLAGS=-g -Wall -O3
 LDLIBS=
 OBJECT=
-EXAMPLE_FILE=
+EXAMPLE_FILE=joeser example example2
 
-example:
-	$(CC) $(CFLAGS) $(LDLIBS) example.c -o example
-	$(CC) $(CFLAGS) $(LDLIBS) example2.c -o example2
+$(EXAMPLE_FILE):
+	$(CC) $(CGALGS) $(LDLIBS) $@.c -o $@
+
 
 clean:
-	rm example example2
+	rm $(EXAMPLE_FILE)
